@@ -1,0 +1,36 @@
+{
+  "stage": "lora_dpo",
+  "run_name": "lora_dpo_persona",
+  "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "beta": 0.1,
+  "adapter_dir": "outputs/lora_dpo_persona/adapter",
+  "train_metrics": {
+    "train_runtime": 195.5451,
+    "train_samples_per_second": 3.068,
+    "train_steps_per_second": 0.384,
+    "total_flos": 239548132922880.0,
+    "train_loss": 0.2580421594778697,
+    "epoch": 3.0
+  },
+  "eval_metrics": {
+    "eval_loss": 0.1333690732717514,
+    "eval_runtime": 2.3355,
+    "eval_samples_per_second": 8.564,
+    "eval_steps_per_second": 4.282,
+    "eval_entropy": 2.5368489742279055,
+    "eval_num_tokens": 116049.0,
+    "eval_logits/chosen": 0.4236502177194046,
+    "eval_logits/rejected": 0.49725415456624766,
+    "eval_mean_token_accuracy": 0.3647060066461563,
+    "eval_rewards/chosen": 1.087658405303955,
+    "eval_rewards/rejected": -1.0414129376411438,
+    "eval_rewards/accuracies": 1.0,
+    "eval_rewards/margins": 2.129071366786957,
+    "eval_logps/chosen": -160.71869049072265,
+    "eval_logps/rejected": -128.97552642822265,
+    "epoch": 3.0
+  },
+  "trainable_parameters": 8683520,
+  "total_parameters": 370504640,
+  "wall_clock": "0h03m18s"
+}

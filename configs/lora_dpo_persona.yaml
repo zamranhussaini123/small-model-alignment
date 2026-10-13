@@ -1,0 +1,38 @@
+# Task 5: TRL DPOTrainer + PEFT/LoRA persona tuning.
+# The only track where TRL and PEFT are permitted.
+stage: lora_dpo
+run_name: lora_dpo_persona
+model_name: HuggingFaceTB/SmolLM2-360M-Instruct
+train_path: data/processed/persona_train.json
+val_path: data/processed/persona_val.json
+output_dir: outputs/lora_dpo_persona
+
+beta: 0.1
+max_length: 320            # measured worst case is ~91 tokens; nothing is truncated
+max_prompt_length: 128
+per_device_batch_size: 2
+grad_accum_steps: 4           # effective batch size 8
+learning_rate: 5.0e-5         # ~50x the full-finetune DPO lr: LoRA updates far fewer weights
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+max_grad_norm: 1.0
+epochs: 3                     # ~200 pairs; one epoch is too few steps to move style
+
+lora:
+  r: 16
+  alpha: 32                   # alpha/r = 2
+  dropout: 0.05
+  target_modules:             # attention + MLP: style lives in token choice, not only attention
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  bias: none
+  task_type: CAUSAL_LM
+
+reference_model: implicit (base weights with LoRA adapters disabled)
+fp16: true
+seed: 42

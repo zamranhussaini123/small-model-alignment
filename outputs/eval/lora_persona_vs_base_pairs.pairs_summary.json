@@ -1,0 +1,15 @@
+{
+  "pairs_path": "outputs/eval/lora_persona_vs_base_pairs.jsonl",
+  "pairs": 26,
+  "dropped_empty": 0,
+  "missing_ids": [],
+  "seed": 42,
+  "models": [
+    "smollm2-360m-instruct",
+    "smollm2-360m-lora-dpo-persona"
+  ],
+  "position_a_counts": {
+    "smollm2-360m-lora-dpo-persona": 12,
+    "smollm2-360m-instruct": 14
+  }
+}

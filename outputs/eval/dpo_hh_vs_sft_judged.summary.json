@@ -1,0 +1,124 @@
+{
+  "judge_model": "google/gemini-3.6-flash",
+  "judge_backend": "kaggle_benchmarks",
+  "samples": 300,
+  "models": [
+    "qwen2.5-0.5b-dpo-hh",
+    "qwen2.5-0.5b-sft"
+  ],
+  "per_model": {
+    "qwen2.5-0.5b-dpo-hh": {
+      "wins": 194,
+      "losses": 84,
+      "ties": 22,
+      "win_rate_with_ties": 0.6467,
+      "win_rate_excluding_ties": 0.6978,
+      "win_rate_ties_as_half": 0.6833
+    },
+    "qwen2.5-0.5b-sft": {
+      "wins": 84,
+      "losses": 194,
+      "ties": 22,
+      "win_rate_with_ties": 0.28,
+      "win_rate_excluding_ties": 0.3022,
+      "win_rate_ties_as_half": 0.3167
+    }
+  },
+  "ties": 22,
+  "unknown": 0,
+  "failed": 0,
+  "decided": 278,
+  "tie_rate": 0.0733,
+  "unknown_rate": 0.0,
+  "failure_rate": 0.0,
+  "by_category": {
+    "harmful_instructions": {
+      "wins": {
+        "qwen2.5-0.5b-dpo-hh": 27,
+        "qwen2.5-0.5b-sft": 1
+      },
+      "ties": 2,
+      "unresolved": 0
+    },
+    "benign_helpfulness": {
+      "wins": {
+        "qwen2.5-0.5b-sft": 18,
+        "qwen2.5-0.5b-dpo-hh": 11
+      },
+      "ties": 1,
+      "unresolved": 0
+    },
+    "legal_financial_safety": {
+      "wins": {
+        "qwen2.5-0.5b-sft": 5,
+        "qwen2.5-0.5b-dpo-hh": 24
+      },
+      "ties": 1,
+      "unresolved": 0
+    },
+    "hate_or_harassment": {
+      "wins": {
+        "qwen2.5-0.5b-dpo-hh": 25,
+        "qwen2.5-0.5b-sft": 4
+      },
+      "ties": 1,
+      "unresolved": 0
+    },
+    "safe_transformation": {
+      "wins": {
+        "qwen2.5-0.5b-dpo-hh": 12,
+        "qwen2.5-0.5b-sft": 18
+      },
+      "ties": 0,
+      "unresolved": 0
+    },
+    "cyber_abuse": {
+      "wins": {
+        "qwen2.5-0.5b-dpo-hh": 23,
+        "qwen2.5-0.5b-sft": 4
+      },
+      "ties": 3,
+      "unresolved": 0
+    },
+    "calibration_and_uncertainty": {
+      "wins": {
+        "qwen2.5-0.5b-sft": 10,
+        "qwen2.5-0.5b-dpo-hh": 12
+      },
+      "ties": 8,
+      "unresolved": 0
+    },
+    "privacy_and_doxxing": {
+      "wins": {
+        "qwen2.5-0.5b-dpo-hh": 26
+      },
+      "ties": 4,
+      "unresolved": 0
+    },
+    "medical_safety": {
+      "wins": {
+        "qwen2.5-0.5b-sft": 11,
+        "qwen2.5-0.5b-dpo-hh": 17
+      },
+      "ties": 2,
+      "unresolved": 0
+    },
+    "self_harm_support": {
+      "wins": {
+        "qwen2.5-0.5b-sft": 13,
+        "qwen2.5-0.5b-dpo-hh": 17
+      },
+      "ties": 0,
+      "unresolved": 0
+    }
+  },
+  "pairs_path": "outputs/eval/dpo_hh_vs_sft_pairs.jsonl",
+  "judgments_path": "outputs/eval/dpo_hh_vs_sft_judged.jsonl",
+  "failures_path": null,
+  "retry_attempts": 60,
+  "failed_batches": 0,
+  "batch_size": 5,
+  "sleep_seconds": 5.0,
+  "max_retries": 3,
+  "safety_mode": true
+}

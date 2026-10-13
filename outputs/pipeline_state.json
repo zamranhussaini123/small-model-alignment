@@ -1,0 +1,123 @@
+{
+  "stages": {
+    "data_prep": {
+      "status": "completed",
+      "updated_at": "2026-10-12 06:26:07",
+      "detail": "",
+      "elapsed": "0h00m40s",
+      "attempts": 1
+    },
+    "baseline_sanity": {
+      "status": "completed",
+      "updated_at": "2026-10-12 06:26:39",
+      "detail": "",
+      "elapsed": "0h00m28s",
+      "attempts": 1
+    },
+    "sft": {
+      "status": "completed",
+      "updated_at": "2026-10-12 14:11:26",
+      "detail": "",
+      "elapsed": "0h07m14s",
+      "attempts": 2
+    },
+    "dpo_hh": {
+      "status": "completed",
+      "updated_at": "2026-10-12 15:55:11",
+      "detail": "",
+      "attempts": 1,
+      "elapsed": "1h43m44s"
+    },
+    "dpo_uf": {
+      "status": "completed",
+      "updated_at": "2026-10-12 18:27:57",
+      "detail": "",
+      "attempts": 1,
+      "elapsed": "2h32m45s"
+    },
+    "lora_dpo": {
+      "status": "completed",
+      "updated_at": "2026-10-12 08:29:43",
+      "detail": "",
+      "elapsed": "0h03m40s",
+      "attempts": 1
+    },
+    "plots": {
+      "status": "completed",
+      "updated_at": "2026-10-12 18:28:02",
+      "detail": "",
+      "elapsed": "0h00m04s",
+      "attempts": 2
+    },
+    "gen_base_alpaca": {
+      "status": "completed",
+      "updated_at": "2026-10-12 08:35:22",
+      "detail": "",
+      "elapsed": "0h05m35s",
+      "attempts": 1
+    },
+    "gen_sft_alpaca": {
+      "status": "completed",
+      "updated_at": "2026-10-12 18:33:28",
+      "detail": "",
+      "attempts": 1,
+      "elapsed": "0h05m26s"
+    },
+    "gen_dpo_uf_alpaca": {
+      "status": "completed",
+      "updated_at": "2026-10-12 18:38:55",
+      "detail": "",
+      "attempts": 1,
+      "elapsed": "0h05m27s"
+    },
+    "gen_sft_hh": {
+      "status": "completed",
+      "updated_at": "2026-10-12 18:44:11",
+      "detail": "",
+      "attempts": 1,
+      "elapsed": "0h05m15s"
+    },
+    "gen_dpo_hh_hh": {
+      "status": "completed",
+      "updated_at": "2026-10-12 18:49:25",
+      "detail": "",
+      "attempts": 1,
+      "elapsed": "0h05m13s"
+    },
+    "gen_persona_base": {
+      "status": "completed",
+      "updated_at": "2026-10-12 08:36:13",
+      "detail": "",
+      "elapsed": "0h00m50s",
+      "attempts": 1
+    },
+    "gen_persona_lora": {
+      "status": "completed",
+      "updated_at": "2026-10-12 08:37:05",
+      "detail": "",
+      "elapsed": "0h00m51s",
+      "attempts": 1
+    },
+    "pairs_dpo_uf_vs_sft": {
+      "status": "completed",
+      "updated_at": "2026-10-12 18:49:27",
+      "detail": "",
+      "attempts": 1,
+      "elapsed": "0h00m01s"
+    },
+    "pairs_dpo_hh_vs_sft": {
+      "status": "completed",
+      "updated_at": "2026-10-12 18:49:29",
+      "detail": "",
+      "attempts": 1,
+      "elapsed": "0h00m01s"
+    },
+    "pairs_lora_persona": {
+      "status": "completed",
+      "updated_at": "2026-10-12 08:37:06",
+      "detail": "",
+      "elapsed": "0h00m01s",
+      "attempts": 1
+    }
+  }
+}

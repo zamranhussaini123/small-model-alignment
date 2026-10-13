@@ -1,0 +1,62 @@
+{
+  "stage": "sft",
+  "config": {
+    "model_name": "Qwen/Qwen2.5-0.5B",
+    "train_path": "data/processed/sft_train.json",
+    "val_path": "data/processed/sft_val.json",
+    "output_dir": "outputs/sft",
+    "max_length": 512,
+    "per_device_batch_size": 2,
+    "grad_accum_steps": 16,
+    "learning_rate": 2e-05,
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.1,
+    "max_grad_norm": 1.0,
+    "epochs": 1,
+    "eval_every": 100,
+    "log_every": 10,
+    "eval_batch_size": 8,
+    "max_val_examples": 1000,
+    "reduction": "token_mean",
+    "fp16": true,
+    "save_dtype": "float16",
+    "gradient_checkpointing": false,
+    "num_workers": 2,
+    "seed": 42,
+    "device": "cuda:0",
+    "max_train_examples": 0,
+    "resume_every": 150,
+    "allow_resume": true,
+    "max_seconds": 37759.0,
+    "extra": {}
+  },
+  "effective_batch_size": 32,
+  "optimizer_steps": 937,
+  "train_examples": 30000,
+  "val_examples": 1000,
+  "trainable_parameters": 494032768,
+  "total_parameters": 494032768,
+  "prompt_template": "<|im_start|>user\n{instruction}<|im_end|>\n<|im_start|>assistant\n",
+  "environment": {
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "device_count": 2,
+    "devices": [
+      {
+        "index": 0,
+        "name": "Tesla T4",
+        "total_memory_gib": 14.56
+      },
+      {
+        "index": 1,
+        "name": "Tesla T4",
+        "total_memory_gib": 14.56
+      }
+    ],
+    "transformers": "5.16.1",
+    "datasets": "4.8.5",
+    "peft": "0.20.0",
+    "trl": "1.15.0",
+    "accelerate": "1.14.0"
+  }
+}

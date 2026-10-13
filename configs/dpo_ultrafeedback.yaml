@@ -1,0 +1,30 @@
+# From-scratch DPO on UltraFeedback-style general preference pairs.
+# Evaluated on the fixed 300-prompt AlpacaEval subset (seed 42).
+stage: dpo
+run_name: dpo_uf
+policy_path: outputs/sft/best
+reference_path: outputs/sft/best   # frozen copy of the same SFT checkpoint
+train_path: data/processed/uf_train.json
+val_path: data/processed/uf_val.json
+output_dir: outputs/dpo_uf
+
+beta: 0.1
+max_length: 512
+max_prompt_length: 256        # over-long prompts are truncated from the left
+per_device_batch_size: 1
+grad_accum_steps: 32          # effective batch size 32
+learning_rate: 1.0e-6
+lr_schedule: constant         # the manual's default: no decay for DPO
+optimizer: rmsprop            # as used in the DPO paper's implementation
+max_grad_norm: 1.0
+epochs: 1
+
+fp16: true
+policy_device: cuda:0         # fp32 trainable policy
+reference_device: cuda:1      # fp16 frozen reference
+eval_every: 50
+eval_batch_size: 4
+eval_subset: 300              # periodic evals; the full 1000 pairs are scored once at the end
+max_val_examples: 1000
+checkpoint_selection: highest validation reward accuracy
+seed: 42

@@ -1,0 +1,12 @@
+{
+  "stage": "sft",
+  "status": "completed",
+  "optimizer_steps": 937,
+  "best_val_loss": 1.371957226749029,
+  "final_val_loss": 1.371957226749029,
+  "wall_clock": "0h06m41s",
+  "best_checkpoint": "outputs/sft/best",
+  "final_checkpoint": "outputs/sft/final",
+  "reduction": "token_mean",
+  "output_size_gib": 2.37
+}

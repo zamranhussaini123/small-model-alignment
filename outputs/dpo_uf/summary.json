@@ -1,0 +1,21 @@
+{
+  "stage": "dpo",
+  "run_name": "dpo_uf",
+  "status": "completed",
+  "optimizer_steps": 468,
+  "beta": 0.1,
+  "selection_val_pairs": 300,
+  "best_val_reward_accuracy": 0.7,
+  "final_val_reward_accuracy": 0.69,
+  "final_val_reward_margin": 0.5109534452358881,
+  "final_val_loss": 0.5907437946399053,
+  "full_val_pairs": 1000,
+  "full_val_reward_accuracy": 0.715,
+  "full_val_reward_margin": 0.5171223621666431,
+  "full_val_loss": 0.5778878747224808,
+  "reference_checkpoint": "outputs/sft/best",
+  "best_checkpoint": "outputs/dpo_uf/best",
+  "final_checkpoint": "outputs/dpo_uf/final",
+  "wall_clock": "2h32m27s",
+  "output_size_gib": 2.37
+}

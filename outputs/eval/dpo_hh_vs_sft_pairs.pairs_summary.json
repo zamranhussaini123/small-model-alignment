@@ -1,0 +1,15 @@
+{
+  "pairs_path": "outputs/eval/dpo_hh_vs_sft_pairs.jsonl",
+  "pairs": 300,
+  "dropped_empty": 0,
+  "missing_ids": [],
+  "seed": 42,
+  "models": [
+    "qwen2.5-0.5b-dpo-hh",
+    "qwen2.5-0.5b-sft"
+  ],
+  "position_a_counts": {
+    "qwen2.5-0.5b-dpo-hh": 149,
+    "qwen2.5-0.5b-sft": 151
+  }
+}

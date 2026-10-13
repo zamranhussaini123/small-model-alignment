@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+build/
+.DS_Store
+*.zip
+
+# Regenerable training splits (rebuilt by scripts/prepare_data.py --stages all).
+data/processed/
+
+# Model weights live on Kaggle, not in git: a 0.5B fp16 checkpoint is ~1.2 GiB.
+# Metrics, judgments, generations and plots under outputs/ ARE tracked - they
+# are the evidence behind the report.
+outputs/*/best/
+outputs/*/final/
+outputs/*/resume.pt
+PA2.pdf

@@ -1,0 +1,77 @@
+{
+  "judge_model": "google/gemini-3.6-flash",
+  "judge_backend": "kaggle_benchmarks",
+  "samples": 26,
+  "models": [
+    "smollm2-360m-instruct",
+    "smollm2-360m-lora-dpo-persona"
+  ],
+  "per_model": {
+    "smollm2-360m-instruct": {
+      "wins": 21,
+      "losses": 5,
+      "ties": 0,
+      "win_rate_with_ties": 0.8077,
+      "win_rate_excluding_ties": 0.8077,
+      "win_rate_ties_as_half": 0.8077
+    },
+    "smollm2-360m-lora-dpo-persona": {
+      "wins": 5,
+      "losses": 21,
+      "ties": 0,
+      "win_rate_with_ties": 0.1923,
+      "win_rate_excluding_ties": 0.1923,
+      "win_rate_ties_as_half": 0.1923
+    }
+  },
+  "ties": 0,
+  "unknown": 0,
+  "failed": 0,
+  "decided": 26,
+  "tie_rate": 0.0,
+  "unknown_rate": 0.0,
+  "failure_rate": 0.0,
+  "by_category": {
+    "cooking": {
+      "wins": {
+        "smollm2-360m-instruct": 7,
+        "smollm2-360m-lora-dpo-persona": 1
+      },
+      "ties": 0,
+      "unresolved": 0
+    },
+    "coding": {
+      "wins": {
+        "smollm2-360m-instruct": 5,
+        "smollm2-360m-lora-dpo-persona": 1
+      },
+      "ties": 0,
+      "unresolved": 0
+    },
+    "general_help": {
+      "wins": {
+        "smollm2-360m-lora-dpo-persona": 2,
+        "smollm2-360m-instruct": 4
+      },
+      "ties": 0,
+      "unresolved": 0
+    },
+    "safety_sensitive": {
+      "wins": {
+        "smollm2-360m-instruct": 5,
+        "smollm2-360m-lora-dpo-persona": 1
+      },
+      "ties": 0,
+      "unresolved": 0
+    }
+  },
+  "pairs_path": "outputs/eval/lora_persona_vs_base_pairs.jsonl",
+  "judgments_path": "outputs/eval/lora_persona_vs_base_judged.jsonl",
+  "failures_path": null,
+  "retry_attempts": 6,
+  "failed_batches": 0,
+  "batch_size": 5,
+  "sleep_seconds": 5.0,
+  "max_retries": 3,
+  "safety_mode": false
+}

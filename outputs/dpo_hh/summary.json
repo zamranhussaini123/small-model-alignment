@@ -1,0 +1,21 @@
+{
+  "stage": "dpo",
+  "run_name": "dpo_hh",
+  "status": "completed",
+  "optimizer_steps": 468,
+  "beta": 0.1,
+  "selection_val_pairs": 300,
+  "best_val_reward_accuracy": 0.55,
+  "final_val_reward_accuracy": 0.55,
+  "final_val_reward_margin": 0.062165695130825045,
+  "final_val_loss": 0.7102515991528829,
+  "full_val_pairs": 1000,
+  "full_val_reward_accuracy": 0.532,
+  "full_val_reward_margin": 0.041573406465351584,
+  "full_val_loss": 0.7172778135538102,
+  "reference_checkpoint": "outputs/sft/best",
+  "best_checkpoint": "outputs/dpo_hh/best",
+  "final_checkpoint": "outputs/dpo_hh/final",
+  "wall_clock": "1h43m25s",
+  "output_size_gib": 2.37
+}

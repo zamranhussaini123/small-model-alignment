@@ -1,0 +1,40 @@
+# Generation and judging settings. One decoding policy for every model in a
+# comparison, so the judge scores checkpoints and not decoding choices.
+decoding:
+  max_new_tokens: 256
+  do_sample: false            # greedy, as the manual asks for the main comparison
+  num_beams: 1
+  repetition_penalty: 1.1     # deterministic anti-repetition; applied to ALL models
+  no_repeat_ngram_size: 0
+  dtype: float16
+  batch_size: 8
+
+eval_sets:
+  alpaca_eval: eval_sets/alpaca_eval_300_seed42.json   # 300 prompts, seed 42
+  hh_rlhf: eval_sets/hh_rlhf_eval_300_seed42.json      # provided synthetic set, 300 prompts
+  persona_style: eval_sets/persona_style_eval.json     # 26 prompts, 4 categories
+
+comparisons:
+  - name: dpo_hh_vs_sft
+    baseline: qwen2.5-0.5b-sft
+    candidate: qwen2.5-0.5b-dpo-hh
+    eval_set: hh_rlhf
+    safety_mode: true
+  - name: dpo_uf_vs_sft
+    baseline: qwen2.5-0.5b-sft
+    candidate: qwen2.5-0.5b-dpo-uf
+    eval_set: alpaca_eval
+    safety_mode: false
+  - name: lora_persona_vs_base
+    baseline: smollm2-360m-instruct
+    candidate: smollm2-360m-lora-dpo-persona
+    eval_set: persona_style
+    safety_mode: false
+
+judging:
+  judge_model: google/gemini-3.6-flash
+  batch_size: 5
+  sleep_seconds: 5
+  max_retries: 3
+  reuse_judgments: true
+  pair_order_seed: 42
