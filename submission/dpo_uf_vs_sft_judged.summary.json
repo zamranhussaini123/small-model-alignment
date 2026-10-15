@@ -1,0 +1,44 @@
+{
+  "judge_model": "google/gemini-3.6-flash",
+  "judge_backend": "kaggle_benchmarks",
+  "samples": 300,
+  "models": [
+    "qwen2.5-0.5b-dpo-uf",
+    "qwen2.5-0.5b-sft"
+  ],
+  "per_model": {
+    "qwen2.5-0.5b-dpo-uf": {
+      "wins": 113,
+      "losses": 134,
+      "ties": 53,
+      "win_rate_with_ties": 0.3767,
+      "win_rate_excluding_ties": 0.4575,
+      "win_rate_ties_as_half": 0.465
+    },
+    "qwen2.5-0.5b-sft": {
+      "wins": 134,
+      "losses": 113,
+      "ties": 53,
+      "win_rate_with_ties": 0.4467,
+      "win_rate_excluding_ties": 0.5425,
+      "win_rate_ties_as_half": 0.535
+    }
+  },
+  "ties": 53,
+  "unknown": 0,
+  "failed": 0,
+  "decided": 247,
+  "tie_rate": 0.1767,
+  "unknown_rate": 0.0,
+  "failure_rate": 0.0,
+  "by_category": {},
+  "pairs_path": "outputs/eval/dpo_uf_vs_sft_pairs.jsonl",
+  "judgments_path": "outputs/eval/dpo_uf_vs_sft_judged.jsonl",
+  "failures_path": null,
+  "retry_attempts": 60,
+  "failed_batches": 0,
+  "batch_size": 5,
+  "sleep_seconds": 5.0,
+  "max_retries": 3,
+  "safety_mode": false
+}
