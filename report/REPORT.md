@@ -355,6 +355,11 @@ preference set.
 | Blinded pairwise files | `outputs/eval/*_pairs.jsonl` |
 | Judgments and summaries | `outputs/eval/*_judged.jsonl`, `*_judged.summary.json` |
 | Combined tables | `outputs/results_summary.md` |
+| Trained checkpoints | not in the repository; see note below |
+
+**Checkpoints.** Weights are not committed, since best plus final for three runs is roughly 7 GiB;
+they live in the saved Kaggle output of `pa2-pipeline-r2` at the `outputs/<run>/best` paths named
+above. The LoRA adapter is small enough to commit, at `outputs/lora_dpo_persona/adapter`.
 
 **Reproduce.** Run `notebooks/01_pipeline_kaggle.ipynb` on Kaggle `GPU T4 x2` with Internet on and
 the project dataset attached, taking about 6 hours, then attach its output to

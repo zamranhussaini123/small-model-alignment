@@ -35,8 +35,8 @@ html_body = markdown.markdown(body, extensions=["tables", "fenced_code"])
 
 CSS = """
 @page { size: A4; margin: 13mm 12mm; }
-body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-size: 8.9pt;
-       line-height: 1.33; color: #111; }
+body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-size: 8.6pt;
+       line-height: 1.30; color: #111; }
 h1 { font-size: 16pt; margin: 0 0 2pt; border-bottom: 2px solid #333; padding-bottom: 3pt; }
 h2 { font-size: 11.4pt; margin: 9pt 0 3.5pt; border-bottom: 1px solid #bbb; padding-bottom: 2pt; }
 h3 { font-size: 9.8pt; margin: 6.5pt 0 2.5pt; }
@@ -44,7 +44,7 @@ h2, h3 { page-break-after: avoid; }
 p { margin: 4pt 0; }
 /* Fixed layout + aggressive wrapping: long file paths were overflowing the page. */
 table { border-collapse: collapse; width: 100%; table-layout: fixed;
-        margin: 4pt 0 6.5pt; font-size: 7.4pt; page-break-inside: avoid; }
+        margin: 3.5pt 0 5.5pt; font-size: 7.2pt; page-break-inside: avoid; }
 th, td { border: 1px solid #c4c4c4; padding: 2.5pt 4pt; text-align: left; vertical-align: top;
          word-break: break-word; overflow-wrap: anywhere; }
 th { background: #ececec; font-weight: 600; }
@@ -58,7 +58,7 @@ pre code { background: none; padding: 0; }
 /* Plots are tall (3 stacked panels); cap the height so two share a page
    instead of each taking one, which pushed the report past the 8-page limit. */
 figure { margin: 5pt 0; page-break-inside: avoid; text-align: center; }
-figure img { max-width: 56%; max-height: 92mm; width: auto; height: auto;
+figure img { max-width: 52%; max-height: 84mm; width: auto; height: auto;
              border: 1px solid #ddd; }
 figcaption { font-size: 7.2pt; color: #555; margin-top: 1.5pt; font-style: italic; }
 ul, ol { margin: 3pt 0 5pt; padding-left: 15pt; }

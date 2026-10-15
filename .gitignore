@@ -20,3 +20,7 @@ outputs/*/final/
 outputs/*/resume.pt
 PA2.pdf
 report/REPORT.html
+submission/
+submission_bundle.zip
+*_pa2.zip
+*_pa2/
